@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FF7D7D"
+    android:background="#FFCCBC"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".MainActivity">
@@ -197,7 +197,6 @@
 
 
     </GridLayout>
-
 
 
 </LinearLayout>
