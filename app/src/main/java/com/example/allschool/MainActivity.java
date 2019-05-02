@@ -47,18 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-public boolean opcionesMenu(MenuItem item)
-{
-    switch (item.getItemId())
-    {
-        case R.id.switch1:
-            return true;
 
-        case R.id.imageView:
-            return true;
-    }
-    return false;
-}
 
     //método para ir a la configuracion de la aplicacion
     public void configuracion(View view)
