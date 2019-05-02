@@ -14,14 +14,6 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignParentRight="true"
-        android:onClick="configuracion"
-        app:srcCompat="@drawable/ajustes" />
-
     <Switch
         android:id="@+id/switch1"
         android:layout_width="40dp"
