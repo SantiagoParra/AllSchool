@@ -14,22 +14,20 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="40dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_toStartOf="@+id/imageView"
-        android:layout_toLeftOf="@+id/imageView"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="274dp"
+        android:layout_marginLeft="274dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:layout_toEndOf="@+id/txt_modo"
         android:layout_toRightOf="@+id/txt_modo"
-        android:shadowColor="#123aaa"
-        android:text="Diurno"
-        android:textSize="8sp" />
-
+        android:onClick="configuracion"
+        app:srcCompat="@drawable/ajustes" />
 
 
 </RelativeLayout>
