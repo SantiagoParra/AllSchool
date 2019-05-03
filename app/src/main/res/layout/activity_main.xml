@@ -39,6 +39,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_view_materias"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -74,6 +75,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_view_horario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -109,6 +111,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_view_nota"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -144,6 +147,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_view_tarea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -179,6 +183,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_view_gps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

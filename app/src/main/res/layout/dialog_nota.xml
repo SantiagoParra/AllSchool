@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_calculonota"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="275dp"
+        android:layout_height="120dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="37dp">
+
+
+        <TextView
+            android:id="@+id/tv_periodo1"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_periodo1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txt_nota1"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_periodo1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txt_porc1"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toEndOf="@+id/txt_nota1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_periodo2"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txt_periodo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_periodo1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:ems="8"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_periodo2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nota1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="8"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toEndOf="@+id/editText5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_porc1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_periodo3"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txt_peridodo3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_periodo2"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_periodo3"
+            app:layout_constraintTop_toBottomOf="@+id/editText5"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toEndOf="@+id/editText7"
+            app:layout_constraintTop_toBottomOf="@+id/editText6"
+            tools:ignore="MissingConstraints" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top|center_vertical"
+        android:text="@string/boton_calcularnota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>

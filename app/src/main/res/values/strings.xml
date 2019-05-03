@@ -5,6 +5,15 @@
     <string name="txt_gps">Gps</string>
     <string name="txt_nota">Mi nota</string>
     <string name="txt_modo">  Modo </string>
+    <string name="txt_calculonota"> Cálculo de nota rápido</string>
+    <string name="txt_periodo1"> Periodo 1</string>
+    <string name="txt_periodo2"> Periodo 2</string>
+    <string name="txt_peridodo3"> Periodo 3</string>
+    <string name="boton_calcularnota"> Calcular</string>
+
+
+
+
 
 
 
