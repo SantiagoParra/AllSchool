@@ -10,11 +10,7 @@
     <string name="txt_periodo2"> Periodo 2</string>
     <string name="txt_peridodo3"> Periodo 3</string>
     <string name="boton_calcularnota"> Calcular</string>
-
-
-
-
-
+    <string name="validacion"> Debe agregar sus dos notas y asignarle sus porcentajes</string>
 
 
 </resources>
