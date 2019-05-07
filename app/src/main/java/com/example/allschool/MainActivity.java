@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
    //private ImageView iv_tareas;
     //private ImageView iv_horario;
     //private ImageView iv_gps;
-    private ImageView iv_calculoNota;
+    private ImageView iv_calculoNota, iv_horario;
     @Required
    private Spinner s1;
 
@@ -37,14 +37,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         iv_calculoNota = (ImageView)findViewById(R.id.img_view_nota);
+        iv_horario = (ImageView)findViewById(R.id.img_view_horario) ;
 
-       iv_calculoNota.setOnClickListener(new View.OnClickListener() {
-                                             @Override
-                                             public void onClick(View v) {
-                                                 Intent nota = new Intent(MainActivity.this, CalculoNota.class);
-                                                 startActivity(nota);
-                                             }
-                                         });
+        iv_calculoNota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nota = new Intent(MainActivity.this, CalculoNota.class);
+                startActivity(nota);
+            }
+        });
+
+        iv_horario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent horario = new Intent(MainActivity.this, Horario.class);
+                startActivity(horario);
+            }
+        });
 
            //   AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
                // View mView =getLayoutInflater().inflate(R.layout.dialog_nota, null);
@@ -69,11 +78,9 @@ public class MainActivity extends AppCompatActivity {
     //método para ir a la configuracion de la aplicacion
     public void configuracion(View view)
     {
-
         Intent conf = new Intent(this, Configuracion.class);
         startActivity(conf);
     }
-
 
 }
 
