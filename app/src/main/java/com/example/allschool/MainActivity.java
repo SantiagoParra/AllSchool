@@ -7,10 +7,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,12 +24,7 @@ public class MainActivity extends AppCompatActivity {
     //private ImageView iv_gps;
     private ImageView iv_calculoNota;
     @Required
-    private EditText txt_nota1;
-    private EditText txt_nota2;
-    private EditText txt_nota3;
-    private EditText txt_porc1;
-    private EditText txt_porc2;
-    private EditText txt_porc3;
+   private Spinner s1;
 
 
 
@@ -49,18 +46,17 @@ public class MainActivity extends AppCompatActivity {
                                              }
                                          });
 
-           //     AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-             //   View mView =getLayoutInflater().inflate(R.layout.dialog_nota, null);
-               // TextView tv_periodo1 = (TextView) findViewById(R.id.tv_periodo1);
-                //TextView tv_periodo2 = (TextView) findViewById(R.id.tv_periodo2);
-               // TextView tv_periodo3 = (TextView) findViewById(R.id.tv_periodo3);
+           //   AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+               // View mView =getLayoutInflater().inflate(R.layout.dialog_nota, null);
+        //String [] opciones = {"2 cortes","", "3 cortes", "4 cortes", "5 cortes"};
+       // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.dialog_nota, opciones);
+        //s1.setAdapter(adapter);
 
-
-         //   mBuilder.setView(mView);
-           // AlertDialog alert = mBuilder.create();
+          //  mBuilder.setView(mView);
+            //AlertDialog alert = mBuilder.create();
             //alert.show();
-           // }
-      //  });
+
+
         //boton ajustes en el action bar
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.btn_ajustes);
