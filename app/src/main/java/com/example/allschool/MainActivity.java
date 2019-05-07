@@ -2,6 +2,7 @@ package com.example.allschool;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
  //  private ImageView iv_materias;
    //private ImageView iv_tareas;
     //private ImageView iv_horario;
-    //private ImageView iv_gps;
+    private ImageView iv_gps;
     private ImageView iv_calculoNota, iv_horario;
     @Required
    private Spinner s1;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         iv_calculoNota = (ImageView)findViewById(R.id.img_view_nota);
         iv_horario = (ImageView)findViewById(R.id.img_view_horario) ;
+        iv_gps = (ImageView)findViewById(R.id.img_view_gps) ;
+
 
         iv_calculoNota.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +57,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(horario);
             }
         });
+        iv_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri gmmIntentUri = Uri.parse("geo:4.5981, -74.0758");
+                Intent mapa = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapa.setPackage("com.google.android.apps.maps");
+                if(mapa.resolveActivity(getPackageManager())!=null)
+                {
+                    startActivity(mapa);
 
+                }
+            }
+        });
            //   AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
                // View mView =getLayoutInflater().inflate(R.layout.dialog_nota, null);
         //String [] opciones = {"2 cortes","", "3 cortes", "4 cortes", "5 cortes"};
