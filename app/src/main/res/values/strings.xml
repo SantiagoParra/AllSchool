@@ -12,5 +12,15 @@
     <string name="boton_calcularnota"> Calcular</string>
     <string name="validacion"> Debe agregar sus dos notas y asignarle sus porcentajes</string>
 
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
+    <string name="miercoles">MIÉ</string>
+    <string name="jueves">JUE</string>
+    <string name="viernes">VIE</string>
+    <string name="sabado">SÁB</string>
+
+    <string name="guardar">Guardar</string>
+    <string name="modificar">Modificar</string>
+    <string name="consultar">Consultar</string>
 
 </resources>

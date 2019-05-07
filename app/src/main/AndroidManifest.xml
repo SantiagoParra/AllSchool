@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CalculoNota"></activity>
+        <activity android:name=".Horario"></activity>
+        <activity android:name=".CalculoNota" />
         <activity
             android:name=".Configuracion"
             android:parentActivityName=".MainActivity" />
