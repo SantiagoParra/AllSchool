@@ -58,11 +58,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Acción que dirige directamente a la entrada de la 7 o la 9 de la universidad, filtrado por el término "BOSQUE"
         iv_gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:4.710211, -74.032583?q=Bosque"); //latitud y longitud de la dirección de la universidad
+                Uri gmmIntentUri = Uri.parse("geo:4.59021, -74.042583?z=10&q=Universidad"); //latitud y longitud de Bogota, filtrado por universidades
                 Intent mapa = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapa.setPackage("com.google.android.apps.maps");
                 if(mapa.resolveActivity(getPackageManager())!=null)
