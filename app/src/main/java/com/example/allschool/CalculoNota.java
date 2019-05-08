@@ -1,5 +1,6 @@
 package com.example.allschool;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +31,6 @@ public class CalculoNota extends AppCompatActivity {
     private TextView tv_periodo3;
 
     private Button btn_calcular3;
-    private Button btn_calcular2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +43,17 @@ public class CalculoNota extends AppCompatActivity {
         txt_porc1 = (EditText) findViewById(R.id.txt_porc1);
         txt_porc2 = (EditText) findViewById(R.id.txt_porc2);
         tv_porc3 = (TextView) findViewById(R.id.tv_porc3);
-        tv1 = (TextView) findViewById(R.id.resultado);
-        btn_calcular2 = (Button) findViewById(R.id.calcular2);
+        tv1 = (TextView) findViewById(R.id.tv_1);
         btn_calcular3 = (Button) findViewById(R.id.btn_calcular);
         tv_periodo2 = (TextView) findViewById(R.id.tv_periodo2);
         tv_periodo3 = (TextView) findViewById(R.id.tv_periodo3);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("Calculo de nota");
 
 
 
         s1 = (Spinner)findViewById(R.id.spinner_cortes);
-        String [] opciones = {"3 cortes", "2 cortes", "4 cortes", "5 cortes"};
+        String [] opciones = {"3", "2", };
          ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, opciones);
         s1.setAdapter(adapter);
     }
@@ -85,17 +86,16 @@ public class CalculoNota extends AppCompatActivity {
                     String porc = String.valueOf(porcentaj3);
                     tv_porc3.setText(porc);
 
-                if((d_nota1 <=5.0&&d_nota1>=0.0)&&(d_nota2<=5.0&&d_nota2>=0.0)) {
+                if((d_nota1 <=5.0&&d_nota1>=0)&&(d_nota2<=5.0&&d_nota2>=0.0)) {
 
                     double respuesta =  (3.0 - ((d_nota1 * d_porc1 / 100)+ (d_nota2 * d_porc2 / 100)));
                     double rta = respuesta /porcentaje;
-                    if(rta<=5 && rta >0) {
+                    if(rta<=5 && rta >=0) {
                         DecimalFormat df = new DecimalFormat("#.00");
                         String numberAsString = new Double(df.format(rta)).toString();
 
                         tv_nota3.setText(numberAsString);
                         tv1.setText("Para pasar con 3.0 usted necesita "+numberAsString + " en su último corte");
-                        Toast.makeText(this, numberAsString, Toast.LENGTH_LONG).show();
                     }
                     else
                     {
@@ -183,7 +183,7 @@ public class CalculoNota extends AppCompatActivity {
     {
 
         String seleccion = s1.getSelectedItem().toString();
-        if(seleccion.equals("2 cortes"))
+        if(seleccion.equals("2"))
         {
             txt_nota2.setVisibility(View.INVISIBLE);
             txt_porc2.setVisibility(View.INVISIBLE);
@@ -191,7 +191,7 @@ public class CalculoNota extends AppCompatActivity {
             tv_periodo2.setVisibility(View.INVISIBLE);
             tv_periodo3.setText("Periodo 2");
            // btn_calcular2.setVisibility(View.VISIBLE);
-            txt_porc1.setText("");
+            txt_porc1.setText("50");
             txt_nota1.setText("");
             tv_nota3.setText("Nota");
             tv_porc3.setText("%");
@@ -204,16 +204,15 @@ public class CalculoNota extends AppCompatActivity {
 
 
         }
-        else if(seleccion.equals("3 cortes"))
+        else if(seleccion.equals("3"))
         {
             txt_nota2.setVisibility(View.VISIBLE);
             txt_porc2.setVisibility(View.VISIBLE);
             tv_periodo2.setVisibility(View.VISIBLE);
             tv_periodo3.setText("Periodo 3");
             btn_calcular3.setVisibility(View.VISIBLE);
-            btn_calcular2.setVisibility(View.INVISIBLE);
-            txt_porc1.setText("");
-            txt_porc2.setText("");
+            txt_porc1.setText("30");
+            txt_porc2.setText("30");
             txt_nota1.setText("");
             txt_nota2.setText("");
             tv_nota3.setText("Nota");
