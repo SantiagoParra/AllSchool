@@ -179,7 +179,7 @@ public class CalculoNota extends AppCompatActivity {
         }
 
     }
-    public void spinner(View view)
+    public void spinner(final View view)
     {
 
         String seleccion = s1.getSelectedItem().toString();
@@ -187,15 +187,20 @@ public class CalculoNota extends AppCompatActivity {
         {
             txt_nota2.setVisibility(View.INVISIBLE);
             txt_porc2.setVisibility(View.INVISIBLE);
-            btn_calcular3.setVisibility(View.INVISIBLE);
+           // btn_calcular3.setVisibility(View.INVISIBLE);
             tv_periodo2.setVisibility(View.INVISIBLE);
             tv_periodo3.setText("Periodo 2");
-            btn_calcular2.setVisibility(View.VISIBLE);
+           // btn_calcular2.setVisibility(View.VISIBLE);
             txt_porc1.setText("");
             txt_nota1.setText("");
             tv_nota3.setText("Nota");
             tv_porc3.setText("%");
-
+            btn_calcular3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    calcular2Cortes(v);
+                }
+            });
 
 
         }
@@ -213,6 +218,12 @@ public class CalculoNota extends AppCompatActivity {
             txt_nota2.setText("");
             tv_nota3.setText("Nota");
             tv_porc3.setText("%");
+            btn_calcular3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    calcular3Cortes(v);
+                }
+            });
         }
     }
 

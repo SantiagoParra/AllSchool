@@ -180,14 +180,6 @@
     </android.support.constraint.ConstraintLayout>
 
     <Button
-        android:id="@+id/calcular2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="calcular2Cortes"
-        android:text="Calcular."
-        android:visibility="invisible" />
-
-    <Button
         android:id="@+id/btn_calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -196,6 +188,13 @@
         android:text="@string/boton_calcularnota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/calcular2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular."
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/resultado"
