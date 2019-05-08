@@ -149,7 +149,7 @@ public class Horario extends AppCompatActivity {
         String ssab7 = sab7.getText().toString();
         String ssab8 = sab8.getText().toString();
 
-        if (!codigo.isEmpty()){
+        if (!codigo.isEmpty() && !codigo.equals("0")){
             ContentValues registro = new ContentValues();
             registro.put("codigo", codigo);
             registro.put("lun1", slun1);
@@ -261,6 +261,8 @@ public class Horario extends AppCompatActivity {
             sab8.setText("");
 
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Seleccione un semestre valido", Toast.LENGTH_SHORT).show();
         }
     }
 
