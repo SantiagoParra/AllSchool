@@ -24,7 +24,7 @@
         android:id="@+id/tv_cortes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Periodos" />
 
     <Spinner
         android:id="@+id/spinner_cortes"
@@ -35,6 +35,7 @@
         android:id="@+id/btn_Guardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="spinner"
         android:text="Guardar" />
 
     <android.support.constraint.ConstraintLayout
@@ -177,6 +178,14 @@
 
 
     </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/calcular2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calcular2Cortes"
+        android:text="Calcular."
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/btn_calcular"
