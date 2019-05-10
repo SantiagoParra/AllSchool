@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class tareas extends AppCompatActivity {
+public class Tareas extends AppCompatActivity {
 
     private ListView tareas;
     private  EditText et_materia;
@@ -32,7 +32,7 @@ public class tareas extends AppCompatActivity {
         tareas = (ListView)findViewById(R.id.lista_tareas);
 
         arrayList = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(tareas.this, android.R.layout.simple_list_item_1, arrayList);
+        adapter = new ArrayAdapter<String>(Tareas.this, android.R.layout.simple_list_item_1, arrayList);
         tareas.setAdapter(adapter);
     }
 

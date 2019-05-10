@@ -82,7 +82,7 @@ public class Horario extends AppCompatActivity {
 
         spinner1 = (Spinner)findViewById(R.id.spinner);
 
-        String [] opciones = {"0","1","2","3","4", "5", "6", "7", "8", "9", "10"};
+        String [] opciones = {"1","2","3","4", "5", "6", "7", "8", "9", "10"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item_calendario, opciones);
         spinner1.setAdapter(adapter);
@@ -149,7 +149,6 @@ public class Horario extends AppCompatActivity {
         String ssab7 = sab7.getText().toString();
         String ssab8 = sab8.getText().toString();
 
-        if (!codigo.isEmpty() && !codigo.equals("0")){
             ContentValues registro = new ContentValues();
             registro.put("codigo", codigo);
             registro.put("lun1", slun1);
@@ -261,9 +260,6 @@ public class Horario extends AppCompatActivity {
             sab8.setText("");
 
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(this, "Seleccione un semestre valido", Toast.LENGTH_SHORT).show();
-        }
     }
 
     public void Buscar(View view){
