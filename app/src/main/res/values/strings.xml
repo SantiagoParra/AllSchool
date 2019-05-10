@@ -25,4 +25,7 @@
     <string name="modificar">Modificar</string>
     <string name="consultar">Consultar</string>
 
+    <string name="et_materia">Materia</string>
+    <string name="et_desc">Descripción de la tarea</string>
+
 </resources>
