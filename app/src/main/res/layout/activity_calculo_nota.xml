@@ -1,71 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="5dp"
     tools:context=".CalculoNota">
 
->
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/txt_calculonota"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tv_cortes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Periodos" />
-
-    <Spinner
-        android:id="@+id/spinner_cortes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btn_Guardar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="spinner"
-        android:text="Guardar" />
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="275dp"
-        android:layout_height="120dp"
+
+        android:layout_width="370dp"
+        android:layout_height="316dp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="37dp">
 
 
         <TextView
             android:id="@+id/tv_periodo1"
-            android:layout_width="65dp"
-            android:layout_height="22dp"
+            android:layout_width="67dp"
+            android:layout_height="24dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:text="@string/txt_periodo1"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cortes"
             tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_cortes"
+            android:layout_width="77dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="24dp"
+            android:text="Periodos"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_cortes"
+            android:layout_width="127dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_cortes"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_Guardar"
+            android:layout_width="89dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="spinner"
+            android:text="Aceptar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toEndOf="@+id/spinner_cortes"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txt_nota1"
             android:layout_width="55dp"
             android:layout_height="35dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="80dp"
+            android:ems="8"
             android:inputType="numberDecimal"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/tv_periodo1"
@@ -77,7 +87,7 @@
             android:layout_height="35dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:ems="10"
@@ -86,9 +96,9 @@
             android:text="30"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toEndOf="@+id/txt_nota1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Guardar" />
 
         <TextView
             android:id="@+id/tv_periodo2"
@@ -106,8 +116,8 @@
             android:id="@+id/txt_nota2"
             android:layout_width="55dp"
             android:layout_height="35dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
             android:ems="8"
             android:inputType="numberDecimal"
             android:textSize="14sp"
@@ -128,7 +138,7 @@
             android:text="30"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintHorizontal_bias="0.134"
             app:layout_constraintStart_toEndOf="@+id/txt_nota2"
             app:layout_constraintTop_toBottomOf="@+id/txt_porc1"
             tools:ignore="MissingConstraints" />
@@ -149,12 +159,16 @@
             android:id="@+id/tv_porc3"
             android:layout_width="55dp"
             android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="76dp"
             android:layout_marginRight="8dp"
             android:text="%"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.358"
+            app:layout_constraintStart_toEndOf="@+id/tv_nota3"
             app:layout_constraintTop_toBottomOf="@+id/txt_porc2"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -162,44 +176,48 @@
             android:id="@+id/tv_nota3"
             android:layout_width="55dp"
             android:layout_height="35dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="Nota"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_porc3"
-            app:layout_constraintHorizontal_bias="0.866"
             app:layout_constraintStart_toEndOf="@+id/tv_periodo3"
             app:layout_constraintTop_toBottomOf="@+id/txt_nota2"
-            app:layout_constraintVertical_bias="0.222" />
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_calcular"
+            android:layout_width="338dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorBotones"
+            android:onClick="calcular3Cortes"
+            android:text="Calcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nota3" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="342dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Resultado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_calcular" />
 
 
     </android.support.constraint.ConstraintLayout>
 
-    <Button
-        android:id="@+id/btn_calcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center|top|center_vertical"
-        android:onClick="calcular3Cortes"
-        android:text="@string/boton_calcularnota"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/calcular2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular."
-        android:visibility="invisible" />
-
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="resultado" />
-
-</LinearLayout>
+</android.support.v7.widget.CardView>
