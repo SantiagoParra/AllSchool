@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -47,6 +48,20 @@ public class Tareas extends AppCompatActivity implements CuadroDialogo.FinalizoC
 
         adapter = new ArrayAdapter<String>(Tareas.this, android.R.layout.simple_list_item_1, arrayList);
         tareas.setAdapter(adapter);
+
+        tareas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String t = arrayList.get(position);
+                String[] parts = t.split("\n");
+                String[] part = parts[0].split("• ");
+                String part1 = part[1];
+                String part2 = parts[1];
+
+                Toast.makeText(Tareas.this,part1 + "\n" + part2, Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -86,6 +101,24 @@ public class Tareas extends AppCompatActivity implements CuadroDialogo.FinalizoC
         }
 
         db.close();
+        finish();
+        startActivity(getIntent());
+    }
+
+    public void Eliminar(String materia, String descripcion){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        SQLiteDatabase db =  admin.getWritableDatabase();
+
+        if (!materia.isEmpty() && !descripcion.isEmpty()){
+            int cantidad = db.delete("tareas", "materia =" + materia + "descripcion =" + descripcion, null);
+            db.close();
+
+            if (cantidad == 1) {
+                Toast.makeText(this, "Tarea eliminada exitosamente", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(this, "Seleccionar una Tarea", Toast.LENGTH_SHORT).show();
+        }
         finish();
         startActivity(getIntent());
     }
