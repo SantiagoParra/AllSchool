@@ -26,6 +26,10 @@
     <string name="consultar">Consultar</string>
 
     <string name="et_materia">Materia</string>
-    <string name="et_desc">Descripción de la tarea</string>
+    <string name="et_desc">Descripción</string>
+    <string name="btn">Agregar</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="tarea">TAREA</string>
+
 
 </resources>
