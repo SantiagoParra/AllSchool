@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
    //private ImageView iv_tareas;
     //private ImageView iv_horario;
     private ImageView iv_gps;
-    private ImageView iv_calculoNota, iv_horario, iv_tareas;
+    private ImageView iv_calculoNota, iv_horario, iv_tareas, iv_materias;
     @Required
    private Spinner s1;
 
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         iv_horario = (ImageView)findViewById(R.id.img_view_horario) ;
         iv_gps = (ImageView)findViewById(R.id.img_view_gps) ;
         iv_tareas = (ImageView)findViewById(R.id.img_view_tarea) ;
+        iv_materias = (ImageView)findViewById(R.id.img_view_materias) ;
+
 
 
         iv_calculoNota.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent tarea = new Intent(MainActivity.this, Tareas.class);
                 startActivity(tarea);
+            }
+        });
+        iv_materias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent materia = new Intent(MainActivity.this, Materias.class);
+                startActivity(materia);
             }
         });
 
