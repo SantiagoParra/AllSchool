@@ -3,6 +3,7 @@ package com.example.allschool;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
@@ -28,7 +29,7 @@ public class lienzo extends View
         drawPaint= new Paint();
         drawPaint.setColor(paintcolor);
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(20);
+        drawPaint.setStrokeWidth(10);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -73,5 +74,13 @@ public class lienzo extends View
         }
 invalidate();
     return true;
+    }
+    public void setColor(String newColor)
+    {
+        invalidate();
+        paintcolor= Color.parseColor(newColor);
+        drawPaint.setColor(paintcolor);
+
+
     }
 }
