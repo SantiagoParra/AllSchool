@@ -92,21 +92,12 @@ public class MainActivity extends AppCompatActivity {
             //alert.show();
 
 
-        //boton ajustes en el action bar
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.btn_ajustes);
-
 
     }
 
 
 
-    //método para ir a la configuracion de la aplicacion
-    public void configuracion(View view)
-    {
-        Intent conf = new Intent(this, Configuracion.class);
-        startActivity(conf);
-    }
+
 
 }
 

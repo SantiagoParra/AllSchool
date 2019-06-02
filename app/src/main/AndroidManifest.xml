@@ -18,9 +18,6 @@
         <activity android:name=".Tareas" />
         <activity android:name=".Horario" />
         <activity android:name=".CalculoNota" />
-        <activity
-            android:name=".Configuracion"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
