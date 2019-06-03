@@ -17,44 +17,48 @@
 
         <ImageButton
 
-        android:id="@+id/button4"
+            android:id="@+id/añadir"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_stat_name"
-></ImageButton>
+            android:onClick="añadir"
+            android:src="@drawable/ic_stat_name"></ImageButton>
+
         <ImageButton
 
-            android:id="@+id/button5"
+            android:id="@+id/editar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/edit"
+            android:onClick="editar"
 
-            ></ImageButton>
+            android:src="@drawable/edit"></ImageButton>
+
         <ImageButton
-            android:id="@+id/button6"
+            android:id="@+id/borrar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/borrar"
+            android:onClick="borrar"
 
-            ></ImageButton>
+            android:src="@drawable/borrar"></ImageButton>
+
         <ImageButton
-            android:id="@+id/button7"
+            android:id="@+id/guardar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/save"
+            android:onClick="guardar"
 
-            ></ImageButton>
+            android:src="@drawable/save"></ImageButton>
     </LinearLayout>
 
     <com.example.allschool.lienzo
         android:id="@+id/Lienzo"
         android:layout_width="400dp"
         android:layout_height="480dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
 
     <LinearLayout
         android:layout_width="match_parent"

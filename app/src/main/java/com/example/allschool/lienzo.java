@@ -6,7 +6,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -15,10 +18,15 @@ public class lienzo extends View
 {
 
     private Path drawPath;
-    private Paint drawPaint, canvasPaint;
+    private static Paint drawPaint;
+    private Paint canvasPaint;
     private int paintcolor = 0xFF000000;
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
+    private float TamañoPunto;
+    private boolean borrado=false;
+
+
     public lienzo(Context context, AttributeSet attrs) {
         super(context, attrs);
         setupDrawing();
@@ -29,14 +37,15 @@ public class lienzo extends View
         drawPaint= new Paint();
         drawPaint.setColor(paintcolor);
         drawPaint.setAntiAlias(true);
+        //setTamañoPunto(10);
+
         drawPaint.setStrokeWidth(10);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
 
-
-    }
+     }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -82,5 +91,25 @@ invalidate();
         drawPaint.setColor(paintcolor);
 
 
+    }
+
+    public static void setTamañoPunto(float nuevoTamaño) {
+        //float pixel = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,nuevoTamaño, getResources().getDisplayMetrics());
+        //TamañoPunto=pixel;
+        drawPaint.setStrokeWidth(nuevoTamaño);
+    }
+    public  void setBorrar(boolean estaBorrado)
+    {
+        borrado = estaBorrado;
+        if(borrado) {
+            drawPaint.setColor(Color.WHITE);
+        }
+        else drawPaint.setColor(paintcolor);
+    }
+
+    public void nuevoDibujo()
+    {
+        drawCanvas.drawColor(0,PorterDuff.Mode.CLEAR);
+        invalidate();
     }
 }
