@@ -21,13 +21,12 @@
     </android.support.design.widget.AppBarLayout>
 
     <include
-        android:id="@+id/include"
         layout="@layout/content_botonnn"
         android:background="#FFFFFF" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab1"
-        android:layout_width="140dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
 
@@ -35,8 +34,6 @@
 
         android:clickable="true"
         app:backgroundTint="#FFFFFF"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center"
         app:srcCompat="@drawable/lapiz" />
 
     <android.support.design.widget.FloatingActionButton
@@ -64,14 +61,12 @@
         app:srcCompat="@drawable/audio" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab2"
+        android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="clip_horizontal|center|clip_vertical|right|end"
         android:clickable="true"
         app:backgroundTint="#FFFFFF"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="end|center"
         app:srcCompat="@drawable/notas" />
 
 </android.support.design.widget.CoordinatorLayout>
