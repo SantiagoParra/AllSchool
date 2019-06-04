@@ -204,7 +204,7 @@ public class dibujo extends AppCompatActivity implements  View.OnClickListener{
     {
         AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
         newDialog.setTitle("Nuevo dibujo");
-        newDialog.setMessage("¿Desea realizar un nuevo dibujo?, perderá el dibujo actual.");
+        newDialog.setMessage("¿Desea realizar un nuevo dibujo? perderá el dibujo actual.");
         newDialog.setPositiveButton("Aceptar",  new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
