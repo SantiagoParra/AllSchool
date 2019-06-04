@@ -43,6 +43,17 @@ public class botonnn extends AppCompatActivity {
                 startActivity(dibujo);
             }
         });
+
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Opción de agregar txt", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent nota = new Intent(botonnn.this, apunteNota.class);
+                startActivity(nota);
+            }
+        });
     }
 
 }

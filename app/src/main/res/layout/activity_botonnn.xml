@@ -21,35 +21,28 @@
     </android.support.design.widget.AppBarLayout>
 
     <include
-        android:id="@+id/include"
         layout="@layout/content_botonnn"
-        android:background="#FFFFFF"
-        app:layout_anchorGravity="start|top" />
+        android:background="#FFFFFF" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
+        android:layout_gravity="bottom|center_horizontal"
 
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/fab_margin"
+
         android:clickable="true"
-        android:padding="140dp"
-        android:paddingLeft="140dp"
-        android:paddingTop="140dp"
-        android:paddingRight="140dp"
-        android:paddingBottom="140dp"
         app:backgroundTint="#FFFFFF"
-        app:borderWidth="16dp"
         app:srcCompat="@drawable/lapiz" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|clip_horizontal|center|clip_vertical|right|center_horizontal|center_vertical|end"
+        android:layout_gravity="bottom|end"
 
-        android:layout_margin="70dp"
+        android:layout_margin="@dimen/fab_margin"
 
         android:clickable="true"
         app:backgroundTint="#FFFFFF"
@@ -57,18 +50,13 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
 
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|left"
 
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
-        android:padding="50dp"
-        android:paddingLeft="50dp"
-        android:paddingTop="50dp"
-        android:paddingRight="50dp"
-        android:paddingBottom="50dp"
         app:backgroundTint="#FFFFFF"
         app:srcCompat="@drawable/audio" />
 
@@ -76,18 +64,9 @@
         android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal|end"
-        android:layout_margin="16dp"
-        android:layout_marginLeft="200dp"
+        android:layout_gravity="clip_horizontal|center|clip_vertical|right|end"
         android:clickable="true"
-        android:padding="100dp"
-        android:paddingLeft="100dp"
-        android:paddingTop="100dp"
-        android:paddingRight="70dp"
-        android:paddingBottom="100dp"
         app:backgroundTint="#FFFFFF"
-        app:borderWidth="30dp"
-        app:layout_anchorGravity="end"
         app:srcCompat="@drawable/notas" />
 
 </android.support.design.widget.CoordinatorLayout>
