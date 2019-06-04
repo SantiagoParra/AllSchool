@@ -54,6 +54,17 @@ public class botonnn extends AppCompatActivity {
                 startActivity(nota);
             }
         });
+
+        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Opción de agregar txt", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent foto = new Intent(botonnn.this, fotoApunte.class);
+                startActivity(foto);
+            }
+        });
     }
 
 }
