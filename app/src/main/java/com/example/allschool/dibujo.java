@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -43,6 +44,8 @@ public class dibujo extends AppCompatActivity implements  View.OnClickListener{
         editar=(ImageButton)findViewById(R.id.editar);
         borrar=(ImageButton)findViewById(R.id.borrar);
         guardar=(ImageButton)findViewById(R.id.guardar);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("Realizar dibujo");
 
 
 
@@ -202,7 +205,6 @@ public class dibujo extends AppCompatActivity implements  View.OnClickListener{
         AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
         newDialog.setTitle("Nuevo dibujo");
         newDialog.setMessage("¿Desea realizar un nuevo dibujo?, perderá el dibujo actual.");
-        Toast.makeText(this, "holi",Toast.LENGTH_SHORT).show();
         newDialog.setPositiveButton("Aceptar",  new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -211,7 +213,6 @@ public class dibujo extends AppCompatActivity implements  View.OnClickListener{
 
             }
         });
-        Toast.makeText(this, "holi oreo",Toast.LENGTH_SHORT).show();
 
         newDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override

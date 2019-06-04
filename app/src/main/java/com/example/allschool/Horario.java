@@ -3,6 +3,7 @@ package com.example.allschool;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,8 @@ public class Horario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horario);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("Agregar horario por semestre");
 
         lun1 = (EditText)findViewById(R.id.lun1);
         lun2 = (EditText)findViewById(R.id.lun2);

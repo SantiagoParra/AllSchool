@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         iv_materias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent materia = new Intent(MainActivity.this, Materias.class);
+                Intent materia = new Intent(MainActivity.this, Asignaturas.class);
                 startActivity(materia);
             }
         });

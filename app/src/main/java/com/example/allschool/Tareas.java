@@ -2,8 +2,10 @@ package com.example.allschool;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +31,8 @@ public class Tareas extends AppCompatActivity implements CuadroDialogo.FinalizoC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tareas);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setTitle("Agregar tareas");
 
         contexto = this;
 
@@ -57,7 +61,8 @@ public class Tareas extends AppCompatActivity implements CuadroDialogo.FinalizoC
                 String[] part = parts[0].split("• ");
                 String part1 = part[1];
                 String part2 = parts[1];
-
+                //Intent materia = new Intent(Tareas.this, Materias.class);
+                //startActivity(materia);
                 Toast.makeText(Tareas.this,part1 + "\n" + part2, Toast.LENGTH_SHORT).show();
             }
         });
